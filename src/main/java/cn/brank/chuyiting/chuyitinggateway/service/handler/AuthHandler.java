@@ -71,11 +71,12 @@ public class AuthHandler implements Handler {
     System.out.println("enter doHandle");
     if (authException != null) {
       asyncResp.consumerFail(new InvocationException(Status.UNAUTHORIZED, (Object) authException.getMessage()));
-      return;
+      throw new InvocationException(Status.UNAUTHORIZED,"auth failed");
     }
 
     if (!authSucc) {
       asyncResp.consumerFail(new InvocationException(Status.UNAUTHORIZED, (Object) "auth failed"));
+      throw new InvocationException(Status.UNAUTHORIZED,"auth failed");
     }
 
     LOGGER.debug("auth success.");

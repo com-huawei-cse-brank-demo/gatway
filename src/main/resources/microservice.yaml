@@ -19,6 +19,8 @@ APPLICATION_ID: chuyiting
 service_description:
   name: edge
   version: 1.0.0
+  properties:
+    allowCrossApp: true
 servicecomb:
   cors:
     enabled: true
@@ -53,26 +55,52 @@ servicecomb:
               path: "/url/business/v2/.*"
               microserviceName: business
               versionRule: 2.0.0-3.0.0
+#cse:
+#  service:
+#    registry:
+#      address: https://cse.cn-north-1.myhuaweicloud.com:443
+#      instance:
+#        watch: false
+#  config:
+#    client:
+#      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
+#      refreshMode: 1
+#      refresh_interval: 5000
+#  #  monitor:
+#  #    client:
+#  #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
+#  rest:
+##    address: 39.96.37.41:18080
+#    address: 0.0.0.0:18080
+#    server:
+#      verticle-count: 8
+#    client:
+#      verticle-count: 8
+#  credentials:
+#    accessKey: LBPFWSWNYNYDA33TTB8Z
+#    secretKey: 1Pyb299AU0lEc3E2sp1oamz21VWQxNX3VGsKNnSj
+#    #    akskCustomCipher: default
+#    project: cn-north-1
+
 cse:
+  #  service:
+  #    registry:
+  #      address: https://cse.cn-north-1.myhuaweicloud.com:443
+  #      instance:
+  #        watch: false
   service:
     registry:
-      address: https://cse.cn-north-1.myhuaweicloud.com:443
-      instance:
-        watch: false
-  config:
-    client:
-      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
-      refreshMode: 1
-      refresh_interval: 5000
+      address: http://127.0.0.1:30100
+  #  config:
+  #    client:
+  #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
+  #      refreshMode: 1
+  #      refresh_interval: 5000
   #  monitor:
   #    client:
   #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
   rest:
     address: 0.0.0.0:18080
-    server:
-      verticle-count: 8
-    client:
-      verticle-count: 8
   credentials:
     accessKey: LBPFWSWNYNYDA33TTB8Z
     secretKey: 1Pyb299AU0lEc3E2sp1oamz21VWQxNX3VGsKNnSj

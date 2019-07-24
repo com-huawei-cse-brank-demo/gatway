@@ -52,6 +52,11 @@ public class EdgeDispatcher extends AbstractEdgeDispatcher {
     EdgeInvocation edgeInvocation = new EdgeInvocation();
     edgeInvocation.setVersionRule(versionMapper.getOrCreate(pathVersion).getVersionRule());
 
+
+    System.out.println(microserviceName);
+    System.out.println(context);
+    System.out.println(path);
+    System.out.println(prefix);
     edgeInvocation.init(microserviceName, context, path, httpServerFilters);
     edgeInvocation.edgeInvoke();
   }
