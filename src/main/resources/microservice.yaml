@@ -70,7 +70,6 @@ servicecomb:
 #  #    client:
 #  #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
 #  rest:
-##    address: 39.96.37.41:18080
 #    address: 0.0.0.0:18080
 #    server:
 #      verticle-count: 8
