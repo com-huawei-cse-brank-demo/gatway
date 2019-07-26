@@ -77,8 +77,8 @@ servicecomb:
 #    client:
 #      verticle-count: 8
 #  credentials:
-#    accessKey: LBPFWSWNYNYDA33TTB8Z
-#    secretKey: 1Pyb299AU0lEc3E2sp1oamz21VWQxNX3VGsKNnSj
+#    accessKey: YourAccessKey
+#    secretKey: YourSecretKey
 #    #    akskCustomCipher: default
 #    project: cn-north-1
 
@@ -102,7 +102,7 @@ cse:
   rest:
     address: 0.0.0.0:18080
   credentials:
-    accessKey: LBPFWSWNYNYDA33TTB8Z
-    secretKey: 1Pyb299AU0lEc3E2sp1oamz21VWQxNX3VGsKNnSj
+    accessKey: YourAccessKey
+    secretKey: YourSecretKey
     #    akskCustomCipher: default
     project: cn-north-1
